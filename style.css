@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(253, 21%, 92%);
+}
+.container {
+  width: 90%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 13rem 13rem 13rem;
+  grid-template-areas:
+    "column1 column2 column3"
+    "column1 column2 column3"
+    "column1 column4 column4";
+  /* margin-inline: auto; */
+  gap: 1rem;
+}
+.container > *,
+.insider-element {
+  display: grid;
+  gap: 1rem;
+}
+.insider-element {
+  grid-template-columns: 1fr 1fr;
+}
+.insider-element:nth-child(1) {
+  /* border: 1px solid red; */
+  grid-template-columns: 0.95fr 2fr;
+}
+.one {
+  grid-area: column1;
+}
+.two {
+  grid-area: column2;
+}
+.three {
+  grid-area: column3;
+}
+.four {
+  grid-area: column4;
+}
+.create {
+  background-color: hsl(31, 66%, 93%);
+}
+.content {
+  background-color: hsl(39, 100%, 71%);
+}
+.media {
+  background-color: hsl(256, 67%, 59%);
+}
+.manage {
+  background-color: white;
+}
+.posting {
+  background-color: hsl(39, 100%, 71%);
+}
+.schedule {
+  background-color: hsl(254, 88%, 90%);
+}
+.audience {
+  background-color: white;
+}
+.followers {
+  background-color: hsl(256, 67%, 59%);
+}
