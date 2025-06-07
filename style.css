@@ -36,6 +36,15 @@ body {
   /* border: 1px solid red; */
   grid-template-columns: 0.95fr 2fr;
 }
+.pad {
+  display: grid;
+  padding: 1.5rem;
+  place-items: center;
+  img {
+    width: 10rem;
+    height: auto;
+  }
+}
 .one {
   grid-area: column1;
 }
