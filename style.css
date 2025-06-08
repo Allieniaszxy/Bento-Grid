@@ -12,8 +12,8 @@ body {
   background-color: hsl(253, 21%, 92%);
 }
 .container {
-  width: 90%;
-  height: 90%;
+  width: 60%;
+  height: 90vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 13rem 13rem 13rem;
@@ -80,4 +80,39 @@ body {
 }
 .followers {
   background-color: hsl(256, 67%, 59%);
+}
+
+/*media query*/
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 13rem 13rem 13rem 13rem;
+    grid-template-areas:
+      "column2 column3"
+      "column2 column3"
+      "column4 column4"
+      "column1 column1";
+  }
+  .one {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "column2"
+      "column3"
+      "column4"
+      "column1";
+  }
+  /* .one {
+    grid-template-columns: 1fr 1fr;
+  } */
+  .insider-element,
+  .insider-element:nth-child(1),
+  .one {
+    grid-template-columns: 1fr;
+  }
 }
